@@ -1,5 +1,4 @@
 import pygame
-
 running = True
 fps = 60
 
