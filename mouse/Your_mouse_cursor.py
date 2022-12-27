@@ -16,7 +16,6 @@ if __name__ == "__main__":
     sprite_mouse.rect = sprite_mouse.image.get_rect()
     screen = pygame.display.set_mode((500, 500))
     screen2 = pygame.Surface(screen.get_size())
-    clock = pygame.time.Clock()
     pygame.mouse.set_visible(False)
     x, y = 0, 0
     coor = 1
@@ -34,6 +33,5 @@ if __name__ == "__main__":
             coor = 0
         screen.blit(screen2, (0, 0))
         display_mouse(coor)
-        clock.tick(fps)
         pygame.display.flip()
     pygame.quit()
