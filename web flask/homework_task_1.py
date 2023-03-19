@@ -29,7 +29,7 @@ def handle_planet_name(planet_name):
     <html>
         <head> 
             <meta charset="utf-8">
-            <title>Колонизация</title>
+            <title>Варианты выбора</title>
             <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
             <link rel="stylesheet" type="text/css" href="{url_for('static', filename='css/style.css')}">
         </head>
