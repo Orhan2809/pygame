@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <title>{{title}}</title>
+</head>
+<body>
+    <header>
+      <nav class="navbar navbar-light bg-light">
+          <h1>Миссия Колонизация Марса</h1>
+        <a class="navbar-brand" href="#">Mars One</a>
+      </nav>
+        <h4 class="text_h4">
+            И на Марсе будут яблони цвести!
+        </h4>
+    </header>
+    {% set user_list = ['инженер-исследователь', 'пилот', 'строитель', 'экзобиолог', 'врач',
+                   'инженер по терраформированию', 'климатолог',
+                   'специалист по радиационной защите', 'астрогеолог', 'гляциолог',
+                   'инженер жизнеобеспечения', 'метеоролог', 'оператор марсохода', 'киберинженер',
+                   'штурман', 'пилот дронов'] %}
+    <h2>
+        Cписок профессий
+    </h2>
+    {% if list == "ul" %}
+            {% for user in user_list %}
+                <ul>
+                    <li>
+                        {{user}}
+                    </li>
+                </ul>
+            {% endfor %}
+    {% elif list == "ol" %}
+        {% for user in user_list %}
+        <ol>
+            {{ loop.index }}. {{user}}
+        </ol>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
