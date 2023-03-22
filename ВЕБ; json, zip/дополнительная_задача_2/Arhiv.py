@@ -4,7 +4,7 @@ import shutil
 
 
 class Arhivator(QMainWindow):
-    def __init__(self):
+    def __init__(self, Form):
         super().__init__()
         Form.resize(600, 450)
         self.label = QLabel(Form)
@@ -36,6 +36,6 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     Form = QWidget()
     ui = Arhivator()
-    ui.__init__()
+    ui.__init__(Form)
     Form.show()
     sys.exit(app.exec_())
